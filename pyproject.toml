@@ -1,0 +1,44 @@
+[project]
+name="base_project_user"
+version = "0.1.0"
+
+dependencies=[
+
+    ##Core
+    "fastapi[standard]",
+    "uvicorn[standard]>=0.24.0", 
+    "pydantic",
+    "alembic",
+
+
+    # Database
+    "sqlalchemy>=2.0.0",
+    "alembic>=1.12.0",
+    "psycopg2",
+
+    # Password Hashing
+    "passlib[argon2]>=1.7.4",
+
+
+    # JWT Authentication
+    "python-jose[cryptography]>=3.3.0",
+
+
+    "httpx>=0.25.0",           # Para testar a API
+
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.1.0",           # Linter e formatter rápido
+    "mypy>=1.6.0",           # Type checking
+    "pre-commit>=3.5.0",     # Hooks do Git
+    "pytest-cov>=4.1.0",     # Cobertura de testes (opcional)
+    "ipython>=8.16.0",       # Shell interativo (opcional)
+    "watchfiles>=0.21.0",    # Recarregamento automático (opcional)
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",  # Para testar código async
+]
+
+[tool.fastapi]
+entrypoint = "src.base_project_user.main:app"
