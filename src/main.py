@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Request
-from src.base_project_user.core.HttpException import HttpExceptionHandler
-from src.base_project_user.routes import auth
+from core.HttpException import HttpExceptionHandler
+from routes import auth
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 

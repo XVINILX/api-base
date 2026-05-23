@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from src.base_project_user.schemas.auth import EsqueciASenha, Login, NovaSenha, Register
+from schemas.auth import EsqueciASenha, Login, NovaSenha, Register
 
 router = APIRouter(
     prefix="/auth",

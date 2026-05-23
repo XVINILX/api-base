@@ -14,8 +14,8 @@ if config.config_file_name is not None:
     fileConfig(config.config_file_name)
 
 
-from src.base_project_user.core.database.main import Base
-from src.base_project_user.models import *  
+from core.database.main import Base
+from models import *  
 
 target_metadata = Base.metadata
 
